@@ -42,23 +42,24 @@
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const toggle = document.getElementById('darkModeToggle');
-            const html = document.documentElement;
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.getElementById('darkModeToggle');
+        const html = document.body;
 
-            // Load preference from localStorage
-            if (localStorage.getItem('theme') === 'dark') {
-                html.classList.add('dark-mode');
-                toggle.checked = true;
-            }
+        // Load preference from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            html.classList.add('dark-mode');
+            toggle.checked = true;
+        }
 
-            // Toggle dark mode
-            toggle.addEventListener('change', () => {
-                html.classList.toggle('dark-mode');
-                localStorage.setItem('theme', html.classList.contains('dark-mode') ? 'dark' : 'light');
-            });
+        // Toggle dark mode
+        toggle.addEventListener('change', () => {
+            html.classList.toggle('dark-mode');
+            localStorage.setItem('theme', html.classList.contains('dark-mode') ? 'dark' : 'light');
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
