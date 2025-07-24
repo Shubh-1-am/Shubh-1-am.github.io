@@ -2,66 +2,63 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Singh Shubham Sarvadeo - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Singh Shubham Sarvadeo - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-  <!-- DARK MODE TOGGLE -->
-  <div class="toggle-container">
-    <label class="switch">
-      <input type="checkbox" id="darkModeToggle" />
-      <span class="slider"></span>
-    </label>
-    <span class="toggle-label">Dark Mode</span>
-  </div>
-
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <div class="about-container">
-      <img src="shubham.png" alt="Singh Shubham Sarvadeo" class="profile-pic" />
-      <h1 class="name">SINGH SHUBHAM SARVADEO <span class="name-guj">સિંહ શુભમ સર્વદેવ</span></h1>
-      <p class="tagline">Hello! I'm a passionate researcher, academic enthusiast, and lifelong learner.</p>
-      <div class="about-text">
-        <p>
-          I work as <strong>Member Research Staff</strong> at <strong>Central Research Laboratory, Bharat Electronics Limited</strong>, Ghaziabad — a premier R&D institution under the <strong>Ministry of Defence, Government of India</strong>.
-        </p>
-        <p>
-          My interests lie in <strong>Artificial Intelligence</strong>, its practical applications, <strong>computer vision</strong>, and <strong>machine learning</strong>. I also enjoy building solutions through <strong>Android programming</strong> and hands-on software development.
-        </p>
-        <p>
-          I believe in continuous learning and enjoy working on projects that bridge ideas and implementation.
-        </p>
-      </div>
+    <!-- DARK MODE TOGGLE -->
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle" />
+            <span class="slider round"></span>
+        </label>
+        <span class="toggle-label">Dark Mode</span>
     </div>
-  </section>
 
-  <!-- DARK MODE SCRIPT -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggle = document.getElementById('darkModeToggle');
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="about-container">
+            <img src="shubham.png" alt="Singh Shubham Sarvadeo" class="profile-pic" />
+            <h1 class="name">SINGH SHUBHAM SARVADEO <span class="name-guj">સિંહ શુભમ સર્વદેવ</span></h1>
+            <p class="tagline">Hello! I'm a passionate researcher, academic enthusiast, and lifelong learner.</p>
+            <div class="about-text">
+                <p>
+                    I work as <strong>Member Research Staff</strong> at <strong>Central Research Laboratory, Bharat
+                        Electronics Limited</strong>, Ghaziabad — a premier R&D institution under the <strong>Ministry
+                        of Defence, Government of India</strong>.
+                </p>
+                
+                <p>
+                    My interests lie in <strong>Artificial Intelligence</strong>, its practical applications, <strong>computer vision</strong>, and <strong>machine learning</strong>. I also enjoy building solutions through <strong>Android programming</strong> and hands-on software development.
+                </p>
+                
+                <p>
+                    I believe in continuous learning and enjoy working on projects that bridge ideas and implementation.
+                </p>
+            </div>
+        </div>
+    </section>
 
-      // Load saved theme
-      if (localStorage.getItem('theme') === 'dark') {
-        document.body.classList.add('dark-mode');
-        toggle.checked = true;
-      }
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('darkModeToggle');
+            const html = document.documentElement;
 
-      toggle.addEventListener('change', () => {
-        if (toggle.checked) {
-          document.body.classList.add('dark-mode');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          document.body.classList.remove('dark-mode');
-          localStorage.setItem('theme', 'light');
-        }
-      });
-    });
-  </script>
+            // Load preference from localStorage
+            if (localStorage.getItem('theme') === 'dark') {
+                html.classList.add('dark-mode');
+                toggle.checked = true;
+            }
 
+            // Toggle dark mode
+            toggle.addEventListener('change', () => {
+                html.classList.toggle('dark-mode');
+                localStorage.setItem('theme', html.classList.contains('dark-mode') ? 'dark' : 'light');
+            });
+        });
+    </script>
 </body>
-
 </html>
