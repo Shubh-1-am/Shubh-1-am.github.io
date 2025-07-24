@@ -94,7 +94,6 @@ body {
     line-height: 1.8;
 }
 
-
 /* EDUCATION SECTION */
 #education {
     max-width: 900px;
@@ -116,29 +115,28 @@ body {
 .education-timeline {
     display: flex;
     flex-direction: column;
-    gap: 1.8rem;
+    gap: 2rem;
 }
 
 .edu-card {
     display: flex;
     align-items: center;
-    gap: 1.2rem;
+    gap: 1.5rem;
     border-left: 4px solid var(--guj-color);
     padding-left: 1rem;
 }
 
-.edu-logo {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    border-radius: 8px;
-    background-color: #fff;
-    padding: 4px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+.edu-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
 }
 
-.dark-mode .edu-logo {
-    background-color: #1e1e1e;
+.dark-mode .edu-photo {
+    box-shadow: none;
 }
 
 .edu-content h3 {
