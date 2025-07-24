@@ -94,6 +94,78 @@ body {
     line-height: 1.8;
 }
 
+
+/* EDUCATION SECTION */
+#education {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    background-color: var(--about-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--name-color);
+    text-align: center;
+}
+
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.edu-card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    border-left: 4px solid var(--guj-color);
+    padding-left: 1rem;
+}
+
+.edu-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 4px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .edu-logo {
+    background-color: #1e1e1e;
+}
+
+.edu-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--name-color);
+    margin-bottom: 0.2rem;
+}
+
+.edu-content .note {
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--tagline-color);
+}
+
+.edu-inst {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.edu-years {
+    font-size: 0.9rem;
+    color: var(--tagline-color);
+    margin-top: 0.2rem;
+}
+
+
 /* TOGGLE SWITCH */
 .toggle-container {
     display: flex;
